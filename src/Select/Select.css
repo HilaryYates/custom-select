@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  width: 20em;
+  min-height: 1.5em;
+  border: 0.05em solid #77777756;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  outline: none;
+}
+
+.container:focus {
+  border-color: #92b6ffb0;
+}
+
+.value {
+  flex-grow: 1;
+}
+
+.close-btn {
+  all: unset;
+  cursor: pointer;
+  background: none;
+  color: #777;
+  font-size: 1.25rem;
+}
+
+.close-btn:focus,
+.close-btn:hover {
+  color: #333;
+}
