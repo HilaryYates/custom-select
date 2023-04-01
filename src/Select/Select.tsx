@@ -1,4 +1,4 @@
-import "./Select.css";
+import styles from "./select.module.css";
 
 type SelectOption = {
   label: string;
@@ -13,14 +13,14 @@ type SelectProps = {
 
 export const Select = ({ value, onChange, options }: SelectProps) => {
   return (
-    <div tabIndex={0} className='container'>
-      <span className='value'>Value</span>
-      <button className='close-btn'>&times;</button>
-      <div className='divider'></div>
-      <div className='caret'></div>
-      <ul className='options'>
+    <div tabIndex={0} className={styles.container}>
+      <span className={styles.value}>{value?.label}</span>
+      <button className={styles.close}>&times;</button>
+      <div className={styles.divider}></div>
+      <div className={styles.caret}></div>
+      <ul className={`${styles.options} ${styles.show}`}>
         {options.map((option) => (
-          <li key={option.value} className='option'>
+          <li key={option.value} className={styles.option}>
             {option.label}
           </li>
         ))}

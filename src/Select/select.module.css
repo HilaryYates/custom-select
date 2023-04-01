@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+  width: 20em;
+  min-height: 1.5em;
+  border: 0.05em solid #77777756;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  outline: none;
+}
+
+.container:focus {
+  border-color: #92b6ffb0;
+}
+
+.value {
+  flex-grow: 1;
+}
+
+.close {
+  all: unset;
+  cursor: pointer;
+  background: none;
+  color: #777;
+  font-size: 1.25rem;
+}
+
+.close:focus,
+.close:hover {
+  color: #333;
+}
+
+.divider {
+  background-color: #777;
+  align-self: stretch;
+  width: 0.05em;
+}
+
+.caret {
+  translate: 0 25%;
+  border: 0.25em solid transparent;
+  border-top-color: #777;
+}
+
+.options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 15em;
+  overflow-y: auto;
+  border: 0.05em solid #777;
+  border-radius: 0.25em;
+  width: 100%;
+  left: 0;
+  top: calc(100% + 0.25em);
+  position: absolute;
+  background-color: white;
+  z-index: 100;
+  display: none;
+}
+
+.options.show {
+  display: block;
+}
